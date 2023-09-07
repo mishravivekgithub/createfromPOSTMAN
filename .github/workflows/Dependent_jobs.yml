@@ -13,7 +13,7 @@ jobs:
     name: Upload File
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello World" > file.txt
+      - run: echo "Hello World. this is ${{ github.run_id }}" > file.txt
       - uses: actions/upload-artifact@v2
         with:
           name: file
