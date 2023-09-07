@@ -7,28 +7,24 @@
 # documentation.
 
 name: Share data between jobs
-
-on:
-  push:
-
+on: push
 jobs:
-  chekout:
-    name: Checkout
+  job_1:
+    name: Upload File
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        run: echo "Checkout vivek mishra" >file.txt
-        uses: actions/upload-artifact@v2
+      - run: echo "Hello World" > file.txt
+      - uses: actions/upload-artifact@v2
         with:
           name: file
           path: file.txt
 
-  build:
-    name: Build
+  job_2:
+    name: Download File
     runs-on: ubuntu-latest
-    needs: chekout
+    needs: job_1
     steps:
       - uses: actions/download-artifact@v2
         with:
           name: file
-      - run cat file.txt
+      - run: cat file.txt
