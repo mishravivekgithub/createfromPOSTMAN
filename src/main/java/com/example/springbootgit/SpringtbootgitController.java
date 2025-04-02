@@ -10,6 +10,6 @@ public class SpringtbootgitController {
     // help me to create a get method that return string
     @GetMapping
     public String successMessage(){
-        return "Hello GIT";
+        return "Hello GIT Demo";
     }
 }
