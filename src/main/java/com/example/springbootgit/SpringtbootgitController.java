@@ -12,4 +12,14 @@ public class SpringtbootgitController {
     public String successMessage(){
         return "Hello GIT Demo";
     }
+    @GetMapping
+    public String successdemo(){
+        try {
+            return "Hello GIT new Demo";
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "An error occurred";
+        }
+    }
+    
 }
