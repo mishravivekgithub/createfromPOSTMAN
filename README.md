@@ -42,7 +42,7 @@ Run the test suite using:
 deno test
 ```
 
-## Contributing
+## Contributing the demo
 
 Contributions are welcome! Please follow the [contribution guidelines](CONTRIBUTING.md).
 
